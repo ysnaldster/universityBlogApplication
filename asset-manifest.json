@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/universityBlog/static/js/main.15077ce6.chunk.js",
+    "main.js.map": "/universityBlog/static/js/main.15077ce6.chunk.js.map",
+    "runtime-main.js": "/universityBlog/static/js/runtime-main.ff685637.js",
+    "runtime-main.js.map": "/universityBlog/static/js/runtime-main.ff685637.js.map",
+    "static/css/2.4be38407.chunk.css": "/universityBlog/static/css/2.4be38407.chunk.css",
+    "static/js/2.87aabc29.chunk.js": "/universityBlog/static/js/2.87aabc29.chunk.js",
+    "static/js/2.87aabc29.chunk.js.map": "/universityBlog/static/js/2.87aabc29.chunk.js.map",
+    "index.html": "/universityBlog/index.html",
+    "static/css/2.4be38407.chunk.css.map": "/universityBlog/static/css/2.4be38407.chunk.css.map",
+    "static/js/2.87aabc29.chunk.js.LICENSE.txt": "/universityBlog/static/js/2.87aabc29.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ff685637.js",
+    "static/css/2.4be38407.chunk.css",
+    "static/js/2.87aabc29.chunk.js",
+    "static/js/main.15077ce6.chunk.js"
+  ]
+}

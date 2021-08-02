@@ -5,5 +5,7 @@ export const types = {
     uiFinishLoading: 'finish loading',
 
     uiArticlesLoad: 'UI articles load',
-    articlesActive: 'articles Active'
+    articlesActive: 'articles Active',
+
+    uiWeareInfo: 'UI weare info'
 }

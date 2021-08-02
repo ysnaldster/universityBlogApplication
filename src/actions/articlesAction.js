@@ -7,7 +7,6 @@ export const articlesLoad = () => {
         dispatch(setArticles(articles))
     }
 }
-
 export const setArticles = (articles) => {
     return {
         type: types.uiArticlesLoad,
@@ -15,10 +14,10 @@ export const setArticles = (articles) => {
     }
 }
 
-// export const articleActive = (id, proyect) => ({
-//     type: types.proyectActive,
-//     payload: {
-//         id,
-//         ...proyect
-//     }
-// });
+export const articleActive = (id, article) => ({
+    type: types.articlesActive,
+    payload: {
+        id,
+        ...article
+    }
+});

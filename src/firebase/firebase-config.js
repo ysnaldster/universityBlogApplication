@@ -3,12 +3,12 @@ import "firebase/firestore";
 import "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAGsmO30slVqe2gk8iQp1l7-VXUn4Yk5Rc",
-    authDomain: "universityblog-b5254.firebaseapp.com",
-    projectId: "universityblog-b5254",
-    storageBucket: "universityblog-b5254.appspot.com",
-    messagingSenderId: "947202108730",
-    appId: "1:947202108730:web:c062d8e544934e12e7f403"
+    apiKey: "AIzaSyBLwIVbSOXUXQgUMFBGqR1H6J3NHxKUajI",
+    authDomain: "universityblog-59c43.firebaseapp.com",
+    projectId: "universityblog-59c43",
+    storageBucket: "universityblog-59c43.appspot.com",
+    messagingSenderId: "199097158690",
+    appId: "1:199097158690:web:692fc55c4f2a2834634e7b"
 };
 
 // Initialize Firebase

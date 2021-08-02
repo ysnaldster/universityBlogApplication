@@ -8,8 +8,7 @@ const StyledMainContainerFooter = styled(Container)`
     height: 130px;
     background-color: #000000;
     padding: 20px 0px;
-    /* position: absolute;
-    bottom: 0px; */
+
 `
 const StyledTtitleBlog = styled(Row)`
     font-size: 28px;

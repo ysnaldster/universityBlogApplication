@@ -124,7 +124,7 @@ const DetailsArticle = () => {
                                 <Link to='/articles'>
                                     <MenuItem>Inicio</MenuItem>
                                 </Link>
-                                <Link to='weare'>
+                                <Link to='/weare'>
                                     <MenuItem>Nosotros</MenuItem>
                                 </Link>
                                 <Link to='/everyone'>

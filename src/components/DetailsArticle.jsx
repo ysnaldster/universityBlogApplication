@@ -114,8 +114,7 @@ const DetailsArticle = () => {
     const articleActive = useSelector(state => state.articlesActive)
     return (
         <div style={{ background: '#393E46' }}>
-            <div className='d-none d-sm-flex' style={{ justifyContent: 'center' }}>
-                <a name='menu' href = '!#'>
+            <div className='d-none d-sm-flex' style={{ justifyContent: 'center' }} id = 'menu'>
                     <StyledMenuDiv>
                         <Menu>
                             <StyledMenuButton>
@@ -134,11 +133,12 @@ const DetailsArticle = () => {
                             </MenuList>
                         </Menu>
                     </StyledMenuDiv>
-                </a>
                 <StyledMainImg src='https://i.ibb.co/8cFg65C/coronavirus-4914026-1920.jpg' alt='covid-image' />
                 <StyledContainerMainTitle>
                     <StyledPTitleOne>Travels</StyledPTitleOne>
-                    <StyledMainH1>{articleActive.active.title}</StyledMainH1>
+                    <StyledMainH1>{
+                    articleActive.active !== undefined && articleActive.active.title
+                    }</StyledMainH1>
                     <StyledTitleTwo>The good news for travelers is that there is no single best time of year to travel to Japan...</StyledTitleTwo>
                     <StyledDividerHr />
                 </StyledContainerMainTitle>
@@ -166,7 +166,7 @@ const DetailsArticle = () => {
                 </StyledRows>
             </StyledContainerMainInfor>
             <StyledDivArrowUp>
-                <a href='#menu'>
+                <a href='#menu'className = 'arrowUp'>
                     <AiOutlineArrowUp style={{ color: '#ffffff', fontSize: '40px' }} />
                 </a>
             </StyledDivArrowUp>

@@ -107,8 +107,7 @@ const SchoolDescription = () => {
     const schoolArticle = useSelector(state => state.articles.articles)
     console.log(schoolArticle);
     return (
-        <div style={{ background: '#393E46' }}>
-            <a name='menu' href = '!#'>
+        <div style={{ background: '#393E46' }} id = 'menu'>
                 <div className='d-none d-sm-flex' style={{ justifyContent: 'center' }}>
                     <StyledMenuDiv>
                         <Menu>
@@ -139,7 +138,6 @@ const SchoolDescription = () => {
                         <StyledDividerHr />
                     </StyledContainerMainTitle>
                 </div>
-            </a>
             <StyledContainerMainInfor fluid>
                 <StyledRows>
                     <StyledColTitleOne xs={12}>
@@ -163,7 +161,7 @@ const SchoolDescription = () => {
                 </StyledRows>
             </StyledContainerMainInfor>
             <StyledDivArrowUp>
-                <a href='#menu'>
+                <a href='#menu' className = 'arrowUp'>
                     <AiOutlineArrowUp style={{ color: '#ffffff', fontSize: '40px' }} />
                 </a>
             </StyledDivArrowUp>

@@ -197,7 +197,7 @@ const ArticlesList = () => {
                                 return (
                                     <StyledSecondMainContainer fluid key={article.id} className='pe-0 ps-0'>
                                         <div>
-                                            <StyledImgArticle src='https://i.ibb.co/KGxd7CD/Children-COVID.png' />
+                                            <StyledImgArticle src= {article.img1} />
                                         </div>
                                         <StyledDivContent>
                                             <StyledCardContainer>
@@ -208,11 +208,11 @@ const ArticlesList = () => {
                                                     </div>
                                                     <StyledCardTitleStyd>{article.title}</StyledCardTitleStyd>
                                                     <StyledSecondPContent>
-                                                        {article.content}
+                                                        {article.content.substring(0, 160)}...
                                                     </StyledSecondPContent>
                                                     <Link to={`/details/${article.id}`}>
                                                         <Button variant="primary" onClick={() => handleClickArticle(article)} style={{ marginTop: '20px' }}>
-                                                            Read More</Button>
+                                                            Leer mas..</Button>
                                                     </Link>
                                                 </Card.Body>
                                             </StyledCardContainer>

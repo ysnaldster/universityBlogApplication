@@ -122,7 +122,7 @@ const HomePage = () => {
                         </Link>
                     </MenuList>
                 </Menu>
-                <StyledTitleMainP>Information Blog of COVID-19</StyledTitleMainP>
+                <StyledTitleMainP>Mariano Picón Salas</StyledTitleMainP>
             </StyledMenuDiv>
             <StyledMainImg src='https://i.ibb.co/DMdKmjs/Prueba-Presentacion.png' alt='covid-image' />
             <StyledContainerMainTitle>

@@ -13,6 +13,7 @@ const StyledMainPhoto = styled.img`
 const StyledMainDiv = styled.div`
     background-color: #393E46;
     padding-bottom: 50px;
+    padding-top: 90px;
 `
 
 const StyledDivInformation = styled.div`
@@ -95,7 +96,6 @@ const StyledDescriptionsGrid = styled.p`
 const StyledRowsContent = styled(Row)`
     padding-top: 5px;
     padding-left: 300px;
-    
 `
 
 const StyledColsContent = styled(Col)`

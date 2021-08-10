@@ -52,9 +52,6 @@ const StyledMenuButtonTwo = styled(MenuButton)`
     border-radius: 500px;
 
 `
-
-
-
 const EveryoneArticles = () => {
     const dispatch = useDispatch()
     const handleClickArticle = (article) => {

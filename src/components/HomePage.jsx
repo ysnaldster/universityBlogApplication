@@ -96,10 +96,15 @@ const StyledButtonOne = styled.button`
     line-height: 24px;
 `
 
+const StyledMainDivResponsive = styled.div`
+    @media (min-width: 1270px){
+        height: 100vh;
+    }
+`
 
 const HomePage = () => {
     return (
-        <div className='d-none d-sm-flex'>
+        <StyledMainDivResponsive className='d-none d-sm-flex'>
             <StyledMenuDiv>
                 <Menu>
                     <StyledMenuButton>
@@ -126,7 +131,7 @@ const HomePage = () => {
                 <StyledTitleTwo>The good news for travelers is that there is no single best time of year to travel to Japan...</StyledTitleTwo>
                 <StyledButtonOne>Read more</StyledButtonOne>
             </StyledContainerMainTitle>
-        </div>
+        </StyledMainDivResponsive>
     )
 }
 

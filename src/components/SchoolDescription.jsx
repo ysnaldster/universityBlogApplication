@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { useSelector } from 'react-redux'
 import styled from 'styled-components'
 import {
@@ -105,39 +105,41 @@ const StyledDividerHr = styled.hr`
 
 const SchoolDescription = () => {
     const schoolArticle = useSelector(state => state.articles.articles)
-    console.log(schoolArticle);
     return (
-        <div style={{ background: '#393E46' }} id = 'menu'>
-                <div className='d-none d-sm-flex' style={{ justifyContent: 'center' }}>
-                    <StyledMenuDiv>
-                        <Menu>
-                            <StyledMenuButton>
-                                <AiOutlineMenu style={{ fontSize: '25px', color: '#ffffff' }} />
-                            </StyledMenuButton>
-                            <MenuList>
-                                <Link to='/articles'>
-                                    <MenuItem>Inicio</MenuItem>
-                                </Link>
-                                <Link to='/weare'>
-                                    <MenuItem>Nosotros</MenuItem>
-                                </Link>
-                                <Link to='/everyone'>
-                                    <MenuItem>Ver mas Artículos</MenuItem>
-                                </Link>
-                            </MenuList>
-                        </Menu>
-                    </StyledMenuDiv>
-                    <StyledMainImg src='https://i.ibb.co/8cFg65C/coronavirus-4914026-1920.jpg' alt='covid-image' />
-                    <StyledContainerMainTitle>
-                        <StyledPTitleOne>Travels</StyledPTitleOne>
-                        <StyledMainH1>{
-                            schoolArticle !== undefined && schoolArticle[3].title
-                        }
-                        </StyledMainH1>
-                        <StyledTitleTwo>The good news for travelers is that there is no single best time of year to travel to Japan...</StyledTitleTwo>
-                        <StyledDividerHr />
-                    </StyledContainerMainTitle>
-                </div>
+        <div style={{ background: '#393E46'}}>
+            <div className='d-none d-sm-flex' style={{ justifyContent: 'center' }} id ='menu'>
+                <StyledMenuDiv>
+                    <Menu>
+                        <StyledMenuButton>
+                            <AiOutlineMenu style={{ fontSize: '25px', color: '#ffffff' }} />
+                        </StyledMenuButton>
+                        <MenuList>
+                            <Link to='/articles'>
+                                <MenuItem>Inicio</MenuItem>
+                            </Link>
+                            <Link to='/weare'>
+                                <MenuItem>Nosotros</MenuItem>
+                            </Link>
+                            <Link to='/everyone'>
+                                <MenuItem>Ver mas Artículos</MenuItem>
+                            </Link>
+                        </MenuList>
+                    </Menu>
+                </StyledMenuDiv>
+                {
+                    schoolArticle !== undefined &&
+                    <StyledMainImg src={schoolArticle[3].image} alt='covid-image' />
+                }
+                <StyledContainerMainTitle>
+                    <StyledPTitleOne>Travels</StyledPTitleOne>
+                    <StyledMainH1>{
+                        schoolArticle !== undefined && schoolArticle[3].title
+                    }
+                    </StyledMainH1>
+                    <StyledTitleTwo>The good news for travelers is that there is no single best time of year to travel to Japan...</StyledTitleTwo>
+                    <StyledDividerHr />
+                </StyledContainerMainTitle>
+            </div>
             <StyledContainerMainInfor fluid>
                 <StyledRows>
                     <StyledColTitleOne xs={12}>
@@ -151,7 +153,10 @@ const SchoolDescription = () => {
                         Because there is so much to consider, we’ve put together this comprehensive guide on the best time to travel to Japan, including information on the seasons, weather, national holidays to look out for, and more.
                     </Col>
                 </StyledRows>
-                <StyledImgArticleDetails src='https://i.ibb.co/8cFg65C/coronavirus-4914026-1920.jpg' alt='second-image' />
+                {
+                    schoolArticle !== undefined &&
+                    <StyledImgArticleDetails src= {schoolArticle[3].imagetwo} alt='second-image' />
+                }
                 <StyledRows>
                     <Col xs={12}>
                         Japan is truly a year-round destination, and Japanese culture is remarkable in its profound appreciation of the changing of the seasons. As you’ll see when you visit, each season — and even sub-season! — is celebrated with seasonal foods, and often matsuri (festivals). Because of this, we typically recommend taking advantage of any chance to visit Japan.
@@ -159,9 +164,13 @@ const SchoolDescription = () => {
                         Because there is so much to consider, we’ve put together this comprehensive guide on the best time to travel to Japan, including information on the seasons, weather, national holidays to look out for, and more.
                     </Col>
                 </StyledRows>
+                {
+                    schoolArticle !== undefined &&
+                    <StyledImgArticleDetails src= {schoolArticle[3].imagefour} alt='second-image' />
+                }
             </StyledContainerMainInfor>
             <StyledDivArrowUp>
-                <a href='#menu' className = 'arrowUp'>
+                <a href='#menu' className='arrowUp'>
                     <AiOutlineArrowUp style={{ color: '#ffffff', fontSize: '40px' }} />
                 </a>
             </StyledDivArrowUp>

@@ -48,7 +48,7 @@ const DescripSchool = () => {
             </Typography>
             <CardActionArea>
                 <StyledMainCard
-                    image="https://i.ibb.co/YT5Xpgr/financiera-1.jpg"
+                    image="https://i.ibb.co/9tfycCt/1.png"
                     title="Contemplative Reptile"
                 />
                 <CardContent>
@@ -63,7 +63,7 @@ const DescripSchool = () => {
             </CardActionArea>
             <StyledCardButtonDescription>
                 <Link to = '/school'>
-                    <StyledButtonInfoSchoolCard size="small">
+                    <StyledButtonInfoSchoolCard>
                         Read More
                     </StyledButtonInfoSchoolCard>
                 </Link>

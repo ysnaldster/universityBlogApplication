@@ -88,7 +88,7 @@ const WeAre = () => {
     };
     return (
         <div style={{ background: '#393E46', height: '100vh' }}>
-            <Container fluid style={{ padding: '40px 140px 30px 140px' }}>
+            <Container fluid style={{ padding: '40px 140px 80px 140px' }}>
                 <Row>
                     <Col xs={4}>
                         <StyledMenuDiv>

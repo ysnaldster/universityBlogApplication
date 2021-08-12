@@ -44,7 +44,7 @@ const DescripSchool = () => {
     return (
         <Card className={classes.root} style={{ height: '100%' }}>
             <Typography className={classes.title} color="textPrimary" gutterBottom style={{ fontSize: '24px', padding: '10px 20px', fontWeight: '700' }}>
-                Escuela Mariano Picón Salas
+                Institución Educativa
             </Typography>
             <CardActionArea>
                 <StyledMainCard
@@ -53,18 +53,17 @@ const DescripSchool = () => {
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                        Lizard
+                        Conoce mas sobre ella
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p" style={{ fontSize: '18px' }}>
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                     Encargada de ofrecer sus servicios educativos a niños, niñas y adolescentes en los subsistemas  de educación inicial y primaria.
                     </Typography>
                 </CardContent>
             </CardActionArea>
             <StyledCardButtonDescription>
-                <Link to = '/school'>
+                <Link to='/school'>
                     <StyledButtonInfoSchoolCard>
-                        Read More
+                        Leer mas..
                     </StyledButtonInfoSchoolCard>
                 </Link>
             </StyledCardButtonDescription>

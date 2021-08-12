@@ -21,7 +21,7 @@ import { Button } from 'react-bootstrap'
 import Footer from './Footer.jsx'
 import { articleActive } from '../actions/articlesAction'
 import { useDispatch } from 'react-redux'
-
+import '../styles/styles.css'
 // Styles
 
 const StyledTitleMainP = styled.p`
@@ -76,14 +76,14 @@ const EveryoneArticles = () => {
                                         <MenuItem>Inicio</MenuItem>
                                     </Link>
                                     <Link to='/weare'>
-                                        <MenuItem>Nosotros</MenuItem>
+                                        <MenuItem>Creadores del Portal</MenuItem>
                                     </Link>
                                 </MenuList>
                             </Menu>
                         </StyledMenuDiv>
                     </Col>
                     <Col xs={8}>
-                        <StyledTitleMainP>Information Blog of COVID-19</StyledTitleMainP>
+                        <StyledTitleMainP>Portal Mariano Picón Salas</StyledTitleMainP>
                     </Col>
                 </Row>
             </Container>
@@ -98,12 +98,13 @@ const EveryoneArticles = () => {
                                             <CardActionArea>
                                                 <CardMedia
                                                     className={classes.media}
-                                                    image="https://i.ibb.co/DMdKmjs/Prueba-Presentacion.png"
+                                                    image= {article.banner}
                                                     title="Contemplative Reptile"
                                                 />
-                                                <CardContent>
-                                                    <Typography gutterBottom variant="h5" component="h2">
+                                                <CardContent >
+                                                    <Typography gutterBottom variant="h5" component="h2" style = {{padding: '15px'}}>
                                                         {article.title}
+                                                    
                                                     </Typography>
                                                     <Typography variant="body2" color="textSecondary" component="p">
                                                         {article.content.substring(0, 80)}
@@ -112,8 +113,8 @@ const EveryoneArticles = () => {
                                             </CardActionArea>
                                             <Link to={`/details/${article.id}`}>
                                                 <CardActions style={{ marginLeft: '10px' }}>
-                                                    <Button variant='primary' onClick={() => handleClickArticle(article)}>
-                                                        Read More
+                                                    <Button variant='dark' onClick={() => handleClickArticle(article)}>
+                                                        Leer mas..
                                                     </Button>
                                                 </CardActions>
                                             </Link>

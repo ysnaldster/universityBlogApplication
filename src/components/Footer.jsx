@@ -2,13 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 import { AiFillHeart } from 'react-icons/ai'
-
 // Styles
 const StyledMainContainerFooter = styled(Container)`
     height: 130px;
     background-color: #000000;
     padding: 20px 0px;
-
 `
 const StyledTtitleBlog = styled(Row)`
     font-size: 28px;
@@ -45,8 +43,8 @@ const Footer = () => {
         <StyledMainContainerFooter fluid>
             <Row>
                 <Col xs={6}>
-                    <StyledTtitleBlog>Information Blog of COVID-19</StyledTtitleBlog>
-                    <StyledRowCopyright>Copyrights 2021. All Rights Reserved</StyledRowCopyright>
+                    <StyledTtitleBlog>Portal Informativo Mariano Picón Salas</StyledTtitleBlog>
+                    <StyledRowCopyright>Copyrights 2021. Todos los Derechos Reservados</StyledRowCopyright>
                 </Col>
                 <StyledColNames xs={3}>
                     <StyledDivLove>Hecho con el <AiFillHeart style = {{margin: '0px 10px', fontSize: '30px'}}/>de:</StyledDivLove>

@@ -24,7 +24,7 @@ const NavDesktop = () => {
                     <Nav>
                         <StyledLinksNav >Inicio</StyledLinksNav>
                         <StyledLinksNav>Articulos</StyledLinksNav>
-                        <StyledLinksNav>Nosotros</StyledLinksNav>
+                        <StyledLinksNav>Creadores del Portal</StyledLinksNav>
                     </Nav>
                 </StyledNavContainer>
             </StyledNavbarMain>

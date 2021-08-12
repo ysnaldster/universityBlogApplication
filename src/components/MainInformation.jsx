@@ -124,12 +124,12 @@ const StyledColsGridUp = styled(Col)`
     text-align: center;
 `
 
-const MainInformation = ({ cont1, cont2, cont3, desp1, desp2, desp3, secondc1, secondc2, secondc3, location, type, range }) => {
+const MainInformation = ({ cont1, cont2, desp1, desp2, secondc1, secondc2, secondc3, location, type, range }) => {
     return (
         <StyledMainDiv>
             <StyledDivInformation>
-                <StyledMainTitlePContainer>Discover Your Own Future Empire Easy Cozy</StyledMainTitlePContainer>
-                <StyledPDescription>Saving much time by finding match one using our algorithm that we designed</StyledPDescription>
+                <StyledMainTitlePContainer>Situación a Nivel Mundial en Temática del Covid 19</StyledMainTitlePContainer>
+                <StyledPDescription>Ministerio de Salud y Proteccion Social - Instituto Nacional de Salud</StyledPDescription>
             </StyledDivInformation>
             <StyledDivSecondInformation>
                 <div>
@@ -139,10 +139,6 @@ const MainInformation = ({ cont1, cont2, cont3, desp1, desp2, desp3, secondc1, s
                 <div>
                     <StyledTitlesGrid>{cont2}</StyledTitlesGrid>
                     <StyledDescriptionsGrid>{desp2}</StyledDescriptionsGrid>
-                </div>
-                <div>
-                    <StyledTitlesGrid>{cont3}</StyledTitlesGrid>
-                    <StyledDescriptionsGrid>{desp3}</StyledDescriptionsGrid>
                 </div>
             </StyledDivSecondInformation>
             <StyledContainerGrid className='ms-0 me-0 ps-0 pe-0'>
@@ -159,7 +155,7 @@ const MainInformation = ({ cont1, cont2, cont3, desp1, desp2, desp3, secondc1, s
                 </StyledRowsContent>
                 <StyledRowsContent>
                     <div>
-                        <StyledButtonSideContainer>Explore now</StyledButtonSideContainer>
+                        <StyledButtonSideContainer>Estado Tachira</StyledButtonSideContainer>
                     </div>
                     <StyledColsContent xs={2}>
                         {location}

@@ -1,14 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import { makeStyles } from '@material-ui/core/styles';
-import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import Collapse from '@material-ui/core/Collapse';
 import { Avatar } from "@chakra-ui/react"
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import {
@@ -21,7 +17,6 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { ImPhone } from 'react-icons/im'
 import Footer from './Footer.jsx'
 
 
@@ -37,9 +32,9 @@ const StyledContainerCardsPerson = styled(Container)`
 `
 
 const StyledTitleMainP = styled.p`
-        font-weight: 700;
-        font-size: 32px;
-        color: #ffffff;
+    font-weight: 700;
+    font-size: 32px;
+    color: #ffffff;
 `
 const StyledMenuDiv = styled.div`
     display: flex;
@@ -81,11 +76,7 @@ const useStyles = makeStyles((theme) => ({
 
 const WeAre = () => {
     const classes = useStyles();
-    const [expanded, setExpanded] = React.useState(false);
     const infoweare = useSelector(state => state.infoWeare.weare)
-    const handleExpandClick = () => {
-        setExpanded(!expanded);
-    };
     return (
         <div style={{ background: '#393E46', height: '100vh' }}>
             <Container fluid style={{ padding: '40px 140px 80px 140px' }}>
@@ -108,7 +99,7 @@ const WeAre = () => {
                         </StyledMenuDiv>
                     </Col>
                     <Col xs={8}>
-                        <StyledTitleMainP>Information Blog of COVID-19</StyledTitleMainP>
+                        <StyledTitleMainP>Portal Mariano Picón Salas</StyledTitleMainP>
                     </Col>
                 </Row>
             </Container>
@@ -131,39 +122,15 @@ const WeAre = () => {
                                         </Row>
                                         <Row>
                                             <Col xs={12} style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}>
-                                                <Avatar name="Dan Abrahmov" src="https://bit.ly/dan-abramov" style={{ height: '100%', width: '80%' }} />
+                                                <Avatar name="Dan Abrahmov" src= {weare.img} style={{ height: '100%', width: '80%' }} />
 
                                             </Col>
                                         </Row>
                                     </Container>
-                                    <Typography variant="body2" color="textSecondary" component="p">
+                                    <Typography variant="body2" color="textSecondary" component="p" style = {{padding: '20px 0px', textAlign: 'justify'}}>
                                         {weare.description}
                                     </Typography>
                                 </CardContent>
-                                <CardActions disableSpacing>
-                                    {/* <IconButton aria-label="contact" style={{ padding: '5px 10px', background: '#FAF8F7', boxShadow: '0px 4px 8px rgb(89 73 30 / 16%)', borderRadius: '0px', marginLeft: '5px' }}>
-                                       
-                                        <div style={{ fontSize: '18px', margin: '5px' }}>Contactar</div>
-                                    </IconButton> */}
-                                    <IconButton
-                                        className={clsx(classes.expand, {
-                                            [classes.expandOpen]: expanded,
-                                        })}
-                                        onClick={handleExpandClick}
-                                        aria-expanded={expanded}
-                                        aria-label="show more"
-                                    >
-                                        <ImPhone/>
-                                    </IconButton>
-                                </CardActions>
-                                <Collapse in={expanded} timeout="auto" unmountOnExit>
-                                    <CardContent>
-                                        <Typography paragraph>Method:</Typography>
-                                        <Typography paragraph>
-                                           Información de Contacto
-                                        </Typography>
-                                    </CardContent>
-                                </Collapse>
                             </Card>
                         )
                     })

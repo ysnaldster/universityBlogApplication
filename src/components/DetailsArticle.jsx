@@ -12,6 +12,12 @@ import { Link } from 'react-router-dom'
 import { Container, Col, Row } from 'react-bootstrap'
 import Footer from './Footer'
 import { AiOutlineArrowUp } from 'react-icons/ai'
+import ArtOne from './articles/ArtOne'
+import ArtTwo from './articles/ArtTwo.jsx'
+import ArtThree from './articles/ArtThree.jsx'
+import ArtFour from './articles/ArtFour.jsx'
+import ArtFive from './articles/ArtFive.jsx'
+import ArtSix from './articles/ArtSix.jsx'
 // Styles 
 
 const StyledMainImg = styled.img`
@@ -90,10 +96,6 @@ const StyledContainerMainInfor = styled(Container)`
     color: #ffffff;
 `
 
-const StyledImgArticleDetails = styled.img`
-    height: 500px;
-    margin: 0px 50px;
-`
 
 const StyledRows = styled(Row)`
     margin: 30px 100px;
@@ -112,17 +114,6 @@ const StyledDividerHr = styled.hr`
     padding: 2px 0px;
 `
 
-const StyledColSecondaryContent = styled(Col)`
-    font-size: 20px;
-    text-align: justify;
-    line-height: 2;
-`
-const StyledColCarac1 = styled(Col)`
-    margin-top: 20px;
-    font-size: 20px;
-    text-align: justify;
-    line-height: 2;
-`
 const StyledContainerReferences = styled(Col)`
     margin-top: 15px;
     font-size: 18px;
@@ -143,7 +134,7 @@ const DetailsArticle = () => {
                                 <MenuItem>Inicio</MenuItem>
                             </Link>
                             <Link to='/weare'>
-                                <MenuItem>Nosotros</MenuItem>
+                                <MenuItem>Creadores del Portal</MenuItem>
                             </Link>
                             <Link to='/everyone'>
                                 <MenuItem>Ver mas Artículos</MenuItem>
@@ -158,7 +149,7 @@ const DetailsArticle = () => {
                 <StyledContainerMainTitle>
                     <StyledPTitleOne>#COVID-19</StyledPTitleOne>
                     <StyledMainH1>{
-                        articleActive.active !== undefined && articleActive.active.title
+                        articleActive.active.title !== undefined && articleActive.active.title
                     }</StyledMainH1>
                     <StyledTitleTwo>
                         {
@@ -172,95 +163,46 @@ const DetailsArticle = () => {
                 <StyledRows>
                     <StyledColTitleOne xs={12}>
                         {
-                            articleActive.active !== undefined && articleActive.active.content
+                            articleActive.active.title === 'El Coronavirus y el Uso Correcto del Tapabocas' && 
+                            <ArtOne/>
+                        }
+                    </StyledColTitleOne>
+                    <StyledColTitleOne xs={12}>
+                        {
+                            articleActive.active.title === 'Las Variantes del Covid 19' && 
+                            <ArtTwo/>
+                        }
+                    </StyledColTitleOne>
+                    <StyledColTitleOne xs={12}>
+                        {
+                            articleActive.active.title === 'Vacunas existentes en el mercado' && 
+                            <ArtThree/>
+                        }
+                    </StyledColTitleOne>
+                    <StyledColTitleOne xs={12}>
+                        {
+                            articleActive.active.title === 'Tratamiento Contra el Covid 19' && 
+                            <ArtFour/>
+                        }
+                    </StyledColTitleOne>
+                    <StyledColTitleOne xs={12}>
+                        {
+                             articleActive.active.title === 'Medidas de Prevención y Control en las Escuelas' && <ArtFive/>
+                        }
+                        {
+                             articleActive.active.title === 'Medidas Preventivas en el Hogar' && <ArtSix/>
                         }
                     </StyledColTitleOne>
                 </StyledRows>
-                <StyledRows>
-                    <StyledColSecondaryContent xs={12}>
-                        {
-                            articleActive.active !== undefined && articleActive.active.content1
-                        }
-                    </StyledColSecondaryContent>
-                    <StyledColCarac1 xs={12}>
-                        {
-                            articleActive.active.carac1 !== undefined &&
-                            <ol>
-                                {
-                                    articleActive.active.carac1.map(r => {
-                                        return (
-                                            <li>{r}</li>
-                                        )
-                                    })
-                                }
-                            </ol>
-                        }
-                    </StyledColCarac1>
-                    <StyledColCarac1 xs={12}>
-                        {
-                            articleActive.active !== undefined && articleActive.active.content2
-                        }
-                    </StyledColCarac1>
-                    <StyledColCarac1 xs={12}>
-                        {
-                            articleActive.active.carac2 !== undefined &&
-                            <ol>
-                                {
-                                    articleActive.active.carac2.map(r => {
-                                        return (
-                                            <li>{r}</li>
-                                        )
-                                    })
-                                }
-                            </ol>
-                        }
-                    </StyledColCarac1>
-                    <StyledColCarac1 xs={12}>
-                        {
-                            articleActive.active !== undefined && articleActive.active.content3
-                        }
-                    </StyledColCarac1>
-                    <StyledColCarac1 xs={12}>
-                        {
-                            articleActive.active !== undefined && articleActive.active.content4
-                        }
-                    </StyledColCarac1>
-                    <StyledColCarac1 xs={12}>
-                        {
-                            articleActive.active.carac3 !== undefined &&
-                            <ol>
-                                {
-                                    articleActive.active.carac3.map(r => {
-                                        return (
-                                            <li>{r}</li>
-                                        )
-                                    })
-                                }
-                            </ol>
-                        }
-                    </StyledColCarac1>
-                    <StyledColCarac1 xs={12}>
-                        {
-                            articleActive.active !== undefined && articleActive.active.content
-                        }
-                    </StyledColCarac1>
-                </StyledRows>
-                <StyledRows>
-                    <Col xs={12}>
-                    </Col>
-                </StyledRows>
-                {
-                    articleActive.active !== undefined && <StyledImgArticleDetails src={articleActive.active.img2} alt='second-image' />
-                }
                 <StyledContainerReferences xs={12}>
                     <p style={{ fontSize: '24px', padding: '10px' }}>Referencias</p>
                     {
-                        articleActive.active !== undefined &&
+                        articleActive.active.references !== undefined &&
                         <ul>
                             {
-                                articleActive.active.references.map(r => {
+                                articleActive.active.references.map((r,index) => {
                                     return (
-                                        <li>
+                                        <li key = {index}>
                                             <a href={r} alt={r}>{r}</a>
                                         </li>
                                     )

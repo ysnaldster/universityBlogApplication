@@ -7,13 +7,11 @@ import HomePage from './HomePage'
 import MainInformation from './MainInformation'
 import styled from 'styled-components'
 import DescripSchool from './DescripSchool'
-import { AiFillGithub } from 'react-icons/ai'
-import { AiOutlineTwitter } from 'react-icons/ai'
-import { FaFacebook } from 'react-icons/fa'
-import { MdEmail } from 'react-icons/md'
 import Footer from './Footer'
-
-
+import {BsBook} from 'react-icons/bs'
+import {TiPencil} from 'react-icons/ti'
+import {HiHome} from 'react-icons/hi'
+import {AiFillSafetyCertificate} from 'react-icons/ai'
 const StyledContainerMainArticles = styled(Container)`
     display: flex;
 `
@@ -145,9 +143,10 @@ const StyledDivImgAside = styled.div`
 const StyledPTitleMainAside = styled.p`
     margin-top: 30px;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 30px;
     text-align: center;
     color: #ffffff;
+    margin: 29px;
 `
 
 const StyledPTitleContentAside = styled.p`
@@ -177,6 +176,7 @@ const StyledButtonOtherArticles = styled.div`
 const StyledButtonReadMoreArticles = styled(Button)`
     padding: 10px 200px;
     margin: 30px;
+    font-size: 18px;
 `
 
 const ArticlesList = () => {
@@ -188,7 +188,7 @@ const ArticlesList = () => {
     return (
         <div>
             <HomePage />
-            <MainInformation cont1='14,800' cont2='640K' cont3='99K' desp1='House & Apartment' desp2='Success Buyer' desp3='Best Locations' secondc1='Location' location='Purbalingga' secondc2='Type' type='Apartment' secondc3='Budget Range' range='$8000 - $15000' />
+            <MainInformation cont1='203.205.809' cont2='4.300.070' desp1='Casos Confirmados en el Mundo' desp2='Muertes a nivel Mundial' secondc1='Casos' location='4.445' secondc2='Vacunados' type='1.100.000' secondc3='Muertes en Venezuela' range='3,705' />
             <StyledContainerMainArticles fluid className='pe-0 ps-0'>
                 <Col xs={8} style={{ background: '#393E46' }}>
                     {
@@ -211,7 +211,7 @@ const ArticlesList = () => {
                                                         {article.content.substring(0, 160)}...
                                                     </StyledSecondPContent>
                                                     <Link to={`/details/${article.id}`}>
-                                                        <Button variant="primary" onClick={() => handleClickArticle(article)} style={{ marginTop: '20px' }}>
+                                                        <Button variant="dark" onClick={() => handleClickArticle(article)} style={{ marginTop: '20px' }}>
                                                             Leer mas..</Button>
                                                     </Link>
                                                 </Card.Body>
@@ -226,35 +226,35 @@ const ArticlesList = () => {
                     }
                     <StyledButtonOtherArticles>
                         <Link to='everyone'>
-                            <StyledButtonReadMoreArticles variant="primary">Read More Articles</StyledButtonReadMoreArticles>
+                            <StyledButtonReadMoreArticles variant="secondary">Leer mas artículos</StyledButtonReadMoreArticles>
                         </Link>
                     </StyledButtonOtherArticles>
                 </Col>
                 <StyledColMainAside>
                     <StyledDivSecondaryAside>
                         <StyledDivImgAside>
-                            <StyledImgAside src='https://i.ibb.co/KGxd7CD/Children-COVID.png' />
+                            <StyledImgAside src='https://i.ibb.co/djgxV3T/Logo-Escuela-Modificado.png' />
                         </StyledDivImgAside>
-                        <StyledPTitleMainAside>Jaspreet Bhamrai</StyledPTitleMainAside>
+                        <StyledPTitleMainAside>Escuela Mariano Picón Salas</StyledPTitleMainAside>
                         <StyledPTitleContentAside>
-                            For as long as I can remember I’ve been obsessed with the idea of travel. I was always that person who was forever daydreaming of foreign lands and unfamiliar cultures; coming up with travel itineraries that would challenge my perceptions and help me gain a deeper understanding of the world.
+                            Institución Educativa encargada de la formación de jovenes en las etapas de preescolar y primaria, a fines de que adquieran los conocimientos para ser las generaciones venideras y trifunfales del futuro. 
                         </StyledPTitleContentAside>
                         <StyledInformationFollowMe>
-                            Follow me
+                           Una educación, es sin duda, un regalo para toda la vida 
                         </StyledInformationFollowMe>
                         <Container fluid className='ps-0 pe-0'>
                             <StyledRowContainerFollows>
                                 <StyledColsFollowFIYG xs={3} className='ps-0 pe-0'>
-                                    <AiFillGithub style={{ fontSize: '30px' }} />
+                                    <BsBook style={{ fontSize: '30px' }} />
                                 </StyledColsFollowFIYG>
                                 <StyledColsFollowFIYG xs={3} className='ps-0 pe-0'>
-                                    <AiOutlineTwitter style={{ fontSize: '30px' }} />
+                                    <TiPencil style={{ fontSize: '30px' }} />
                                 </StyledColsFollowFIYG>
                                 <StyledColsFollowFIYG xs={3} className='ps-0 pe-0'>
-                                    <MdEmail style={{ fontSize: '30px' }} />
+                                    <HiHome style={{ fontSize: '30px' }} />
                                 </StyledColsFollowFIYG>
                                 <StyledFinishedFollowG xs={3} className='ps-0 pe-0'>
-                                    <FaFacebook style={{ fontSize: '30px' }} />
+                                    <AiFillSafetyCertificate style={{ fontSize: '30px' }} />
                                 </StyledFinishedFollowG>
                             </StyledRowContainerFollows>
                         </Container>

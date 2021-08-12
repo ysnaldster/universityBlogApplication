@@ -61,35 +61,39 @@ const StyledPTitleOne = styled.p`
     color: #ffffff;
 `
 const StyledMainH1 = styled.h1`
-    font-weight: 700px;
     color: #ffffff;
     font-weight: 700;
     @media (min-width: 1200px){
-        line-height: 80px;
-        font-size: 40px;
+        font-size: 26px;
+        margin: 0px 50px 0px 50px;
     }
-    @media (min-width: 1400px){
+    @media (min-width: 1450px){
         font-size: 32px;
         line-height: 40px;
+        margin: 0px 50px 12px 50px;
     }
-    margin: 0px 50px 12px 50px;
     @media (min-width: 1600px){
         font-size: 44px;
         line-height: 80px;
     }
 `
 const StyledTitleTwo = styled.p`
-    font-size: 21px;
     font-weight: 400;
-    line-height: 32px;
-    margin: 0px 50px 32px 50px;
     color: #949799;
+    line-height: 32px;
+    @media (min-width: 1200px){
+        padding: 12px 50px; 
+        font-size: 17px; 
+    }
+    @media (min-width: 1450px){
+        font-size: 21px;
+    }
 `
 
 const StyledButtonOne = styled.button`
     margin-left: 50px;
-    width: 155px;
-    height: 55px;
+    width: 200px;
+    height: 50px;
     background: #ffffff;
     font-size: 16px;
     font-weight: 700;
@@ -101,7 +105,6 @@ const StyledMainDivResponsive = styled.div`
         height: 100vh;
     }
 `
-
 const HomePage = () => {
     return (
         <StyledMainDivResponsive className='d-none d-sm-flex'>
@@ -115,7 +118,7 @@ const HomePage = () => {
                             <MenuItem>Inicio</MenuItem>
                         </Link>
                         <Link to='/weare'>
-                            <MenuItem>Nosotros</MenuItem>
+                            <MenuItem>Creadores del Portal</MenuItem>
                         </Link>
                         <Link to='/everyone'>
                             <MenuItem>Ver mas Artículos</MenuItem>
@@ -126,10 +129,10 @@ const HomePage = () => {
             </StyledMenuDiv>
             <StyledMainImg src='https://i.ibb.co/DMdKmjs/Prueba-Presentacion.png' alt='covid-image' />
             <StyledContainerMainTitle>
-                <StyledPTitleOne>Travels</StyledPTitleOne>
-                <StyledMainH1>When Is The Best Time of Year To Visit Japan?</StyledMainH1>
-                <StyledTitleTwo>The good news for travelers is that there is no single best time of year to travel to Japan...</StyledTitleTwo>
-                <StyledButtonOne>Read more</StyledButtonOne>
+                <StyledPTitleOne>Portal Informativo</StyledPTitleOne>
+                <StyledMainH1>El Covid 19 y su impacto en el ámbito Educativo</StyledMainH1>
+                <StyledTitleTwo>Honra a los trabajadores de la salud y los proveedores de cuidado de tu comunidad que velan por las personas con el Covid 19</StyledTitleTwo>
+                <StyledButtonOne>Manten la Prevención</StyledButtonOne>
             </StyledContainerMainTitle>
         </StyledMainDivResponsive>
     )
